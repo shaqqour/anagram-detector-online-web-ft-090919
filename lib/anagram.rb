@@ -6,7 +6,8 @@ class Anagram
   end
   
   def match(anagrams)
-    
+    word_chars = @word.split("").sort
+    anagrams.select { |anagram| anagram.split("").sort == word_chars }
   end
   
 end
